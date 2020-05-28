@@ -40,7 +40,7 @@ public class MultiSelectExample {
         sel.deselectByValue("peach");
         sel.deselectByIndex(0);
 
-        //Exptra practice take it in list and print all then click on Apple
+        //Extra practice take it in list and print all then click on Apple
         List<WebElement> options = sel.getOptions();
         for (WebElement option : options) {
             System.out.println(option.getText());

@@ -39,14 +39,16 @@ public class ArgosePriceList10to15 {
         js.executeScript("window.scrollBy(0,600);");
 
         Thread.sleep(2000);
-        List<WebElement> priceLists = driver.findElements(By.cssSelector(".Checkboxstyles__CheckboxOption-e3lxpy-3.esYLSA"));
-        for (WebElement priceList : priceLists)
-        { System.out.println(priceList.getText());
+        List<WebElement> priceLists = driver.findElements(By.cssSelector("label[name=price]"));//(".Checkboxstyles__LabelValue-e3lxpy-6.fOQrQk"));//(".findability-facet__filters.findability-facet__filters--default"));//(".Checkboxstyles__CheckboxOption-e3lxpy-3.esYLSA"));
+        for (WebElement priceList : priceLists) {
+            //System.out.println(priceList.getText());
+            System.out.println(priceList.getAttribute("value"));
 
             Thread.sleep(2000);
-            if (priceList.getText().contains("£10 - £15")) ;
-            priceList.click();
-            break;
+            //if (priceList.getText().contains("£10 - £15"))
+            if (priceList.getAttribute("value").contains("£10 - £15")) {
+                priceList.click();
+            }
         }
     }
 }

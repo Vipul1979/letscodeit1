@@ -31,10 +31,12 @@ public class CalanderExample {
 
         List<WebElement> calanderDates = driver.findElements(By.cssSelector(".ui-state-default"));
 
-        for (WebElement calanderDate : calanderDates) {
+        for (WebElement calanderDate : calanderDates)
+        {
             System.out.println(calanderDate.getText());
 
-            if (calanderDate.getText().equals("31")) {
+            if (calanderDate.getText().equals("31"))
+            {
                 calanderDate.click();
             }
         }//southhall test method finish
@@ -55,14 +57,14 @@ public class CalanderExample {
         mayMonthDate.click();
         System.out.println(mayMonthDate.isDisplayed());//it will give boolean true or false to verify whether hidden element is displayed or not
         //Take all dates in the Lists
-        List<WebElement> allDates = mayMonthDate.findElements(By.cssSelector(".datepicker-cal-date"));
-
+        //List<WebElement> allDates = mayMonthDate.findElements(By.cssSelector(".datepicker-cal-date"));
+        List<WebElement> allDates = mayMonthDate.findElements(By.cssSelector("button[data-month=\"4\"]"));
         for (WebElement allDate : allDates) {
             System.out.println(allDate.getText());
 
-            if (allDate.getText().contains("7")) {
+            if (allDate.getText().contains("31"))
                 allDate.click();
-            }
+
         }
     }
 }
