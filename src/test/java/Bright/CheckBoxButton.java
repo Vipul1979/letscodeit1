@@ -29,7 +29,8 @@ public class CheckBoxButton {
             WebElement checkboxHonda = driver.findElement(By.id("honda"));
             checkboxHonda.click();
 
-        }
+
+    }//@Test checkbox method end
 
         }
 
