@@ -125,6 +125,5 @@ public class Practice29052020 {
     public void tearDown(){
         //driver.quit();//to close everything
         //driver.close();//to close current window
-    }
+    }//@After method end
 }//Class end
-//Hello world - found new world
