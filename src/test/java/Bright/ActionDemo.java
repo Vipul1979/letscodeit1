@@ -21,7 +21,8 @@ public class ActionDemo {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://learn.letskodeit.com/p/practice");
+       driver.get("https://learn.letskodeit.com/p/practice");
+
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
