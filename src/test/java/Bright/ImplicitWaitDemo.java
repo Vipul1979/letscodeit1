@@ -19,7 +19,8 @@ public class ImplicitWaitDemo {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://learn.letskodeit.com/");
+       // driver.get("https://learn.letskodeit.com/");
+        driver.get("https://www.argos.co.uk/account/login?clickOrigin=header:home:account");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //NoSuchElementException: no such element: Unable to locate element: and test fail
@@ -44,6 +45,18 @@ public class ImplicitWaitDemo {
         WebElement userName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user_email")));
         userName.sendKeys("test");
     }//Explicit method end
+    @Test
+    public void explicit1(){
+        WebElement username = driver.findElement(By.id("email-address"));
+        username.sendKeys("vipul@gmail.com");
+        WebElement password = driver.findElement(By.id("current-password"));
+        password.sendKeys("swami1234");
+
+        WebDriverWait wait = new WebDriverWait(driver,3); //driver instance
+        WebElement signInSecurly = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("button")));
+        signInSecurly.click();
+
+    }
 }//class end
 
 
