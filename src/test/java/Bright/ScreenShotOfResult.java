@@ -33,7 +33,7 @@ public class ScreenShotOfResult {
 
     }//@Test method end
 
-    //You must need to get "commons 2.6" depenency from central repocitory
+    //You must need to get "commons.io 2.6" depenency from central repocitory
     @After
     public void teardown() throws IOException {
         //Convert driver object to TakeScreenshot
