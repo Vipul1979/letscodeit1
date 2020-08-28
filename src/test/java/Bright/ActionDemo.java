@@ -47,6 +47,3 @@ public class ActionDemo {
         driver.close();
     }
 }
-
-// add assertion
-// delete assertion
