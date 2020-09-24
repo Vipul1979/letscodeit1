@@ -21,7 +21,8 @@ public class ActionDemo {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://learn.letskodeit.com/p/practice");
+       driver.get("https://learn.letskodeit.com/p/practice");
+
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
@@ -46,3 +47,7 @@ public class ActionDemo {
         driver.close();
     }
 }
+<<<<<<< HEAD
+//Corrected at 28/08/2020 6.33am
+=======
+>>>>>>> c25e32e0423f527108c0043b853ffdb4e2d07a0b
