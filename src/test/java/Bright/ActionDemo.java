@@ -47,3 +47,7 @@ public class ActionDemo {
         driver.close();
     }
 }
+<<<<<<< HEAD
+//Corrected at 28/08/2020 6.33am
+=======
+>>>>>>> c25e32e0423f527108c0043b853ffdb4e2d07a0b
